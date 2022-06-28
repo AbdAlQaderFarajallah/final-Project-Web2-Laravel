@@ -3,7 +3,7 @@
 <html>
 <head>
     
-    <title>FaceClone</title>
+    <title>aboodChat</title>
 
     @include('site.partials.styles')
 

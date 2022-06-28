@@ -1,6 +1,6 @@
   <!-- main -->
   <main class="container">
-  <h1 class="text-center">Welcome to FaceClone! <br><small>A simple Facebook clone.</small></h1>
+  <h1 class="text-center">Welcome to aboodChat! <br><small>A simple Facebook clone.</small></h1>
 
     <div class="row">
       <div class="col-md-6">
@@ -32,7 +32,7 @@
           </div>
 
           <div class="form-group">
-            <input class="form-control" type="text" name="location" placeholder="Location">
+            <input class="form-control" type="email" name="email" placeholder="email">
           </div>
 
           <div class="form-group">
