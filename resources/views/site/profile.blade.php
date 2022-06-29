@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FaceClone</title>
+  <title>aboodChat</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="/master-template/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/master-template/css/style.css">
 </head>
 <body>
   <!-- nav -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">FaceClone</a>
+        <a class="navbar-brand" href="home">aboodChat</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="home.html">Home</a></li>
@@ -51,7 +51,7 @@
         <!-- user profile -->
         <div class="media">
           <div class="media-left">
-            <img src="img/my_avatar.png" class="media-object" style="width: 128px; height: 128px;">
+            <img src="/master-template/img/my_avatar.png" class="media-object" style="width: 128px; height: 128px;">
           </div>
           <div class="media-body">
             <h2 class="media-heading">nicholaskajoh</h2>
@@ -67,7 +67,7 @@
           <!-- post -->
           <div class="panel panel-default">
             <div class="panel-body">
-              <p>Hello people! This is my first FaceClone post. Hurray!!!</p>
+              <p>Hello people! This is my first aboodChat post. Hurray!!!</p>
             </div>
             <div class="panel-footer">
               <span>posted 2017-5-27 20:45:01 by nicholaskajoh</span> 
@@ -100,11 +100,11 @@
   <!-- footer -->
   <footer class="container text-center">
     <ul class="nav nav-pills pull-right">
-      <li>FaceClone - Made by [your name here]</li>
+      <li>FaceClone - Made by [abood fouad]</li>
     </ul>
   </footer>
   <!-- ./footer -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="/master-template/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/master-template/js/script.js"></script>
 </body>
 </html>

@@ -11,9 +11,6 @@ class siteController extends Controller
         return view('site.master');
     }
 
-    function showHome() {
-        return view('site.home');
-    }
 
     function showProfile() {
         return view('site.profile');

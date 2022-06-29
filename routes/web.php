@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/' , 'App\Http\Controllers\siteController@showIndex' );
-Route::get('/home' , 'App\Http\Controllers\siteController@showHome' );
+
 Route::get('/profile' , 'App\Http\Controllers\siteController@showProfile' );
-Route::get('/index' , 'App\Http\Controllers\siteController@showIndex' );
+
+Route::resource('post' , 'App\Http\Controllers\postController' );
