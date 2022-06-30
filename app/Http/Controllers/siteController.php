@@ -12,8 +12,13 @@ class siteController extends Controller
     }
 
 
-    function showProfile() {
+    function Profile() {
         return view('site.profile');
+    }
+
+
+    function home(){
+        return view('site.home');
     }
 
     

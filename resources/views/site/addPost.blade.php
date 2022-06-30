@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FaceClone</title>
+  <title>aboodChat</title>
 
   <link rel="stylesheet" type="text/css" href="/master-template/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/master-template/css/style.css">
@@ -11,13 +11,8 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">FaceClone</a>
+        <a class="navbar-brand" href="{{route('login')}}">aboodChat</a>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
     </div>
   </nav>
   <!-- ./nav -->
@@ -40,7 +35,7 @@
             <hr>
             <input class="form-control" type="text" name="content" placeholder="Post Content" multiple >
 
-            <input type="hidden" name="user_id" value = 2 >
+            <input type="hidden" name="user_id" value = {{Auth::User()->id}} >
 
             </div>
             <div class="panel-footer">

@@ -11,12 +11,11 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="home">aboodChat</a>
+        <a class="navbar-brand" href="login">aboodChat</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="{{route('Profile')}}">Profile</a></li>
+        <li><a href="{{route('login')}}">Logout</a></li>
       </ul>
     </div>
   </nav>
