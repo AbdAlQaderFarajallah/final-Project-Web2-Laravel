@@ -6,10 +6,15 @@
       <div class="col-md-6">
         <h4>Login to start enjoying unlimited fun!</h4>
 
+
+
+
+        
         <!-- login form -->
-        <form method="post" action="home.html">
+        <form method="POST" action="{{route('authenticate')}}">
+          @csrf
           <div class="form-group">
-            <input class="form-control" type="text" name="username" placeholder="Username">
+            <input class="form-control" type="text" name="name" placeholder="User name">
           </div>
 
           <div class="form-group">
@@ -17,18 +22,23 @@
           </div>
 
           <div class="form-group">
-            <input class="btn btn-primary" type="submit" name="login" value="Login">
+          <input class="btn btn-primary" type="submit" name="login" value="login">
           </div>
         </form>
         <!-- ./login form -->
+
+
       </div>
       <div class="col-md-6">
         <h4>Don't have an account yet? Register!</h4>
 
+
+
         <!-- register form -->
-        <form method="post" action="home.html">
+        <form method="GET" action="{{route('store')}}">
+          @csrf
           <div class="form-group">
-            <input class="form-control" type="text" name="username" placeholder="Username">
+            <input class="form-control" type="text" name="name" placeholder="Username">
           </div>
 
           <div class="form-group">
@@ -44,6 +54,8 @@
           </div>
         </form>
         <!-- ./register form -->
+
+
       </div>
     </div>
   </main>
