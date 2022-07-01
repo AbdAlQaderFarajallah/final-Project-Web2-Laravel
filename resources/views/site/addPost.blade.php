@@ -35,7 +35,7 @@
                             <hr>
                             <input class="form-control" type="text" name="content" placeholder="Post Content" multiple>
 
-                            <input type="hidden" name="user_id" value= {{Auth::User()->id}} >
+                            <input type="hidden" name="user_id" value= {{\Illuminate\Support\Facades\Auth::user()->id}} >
 
                         </div>
                         <div class="panel-footer">

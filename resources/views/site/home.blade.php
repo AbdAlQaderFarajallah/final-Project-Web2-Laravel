@@ -79,11 +79,13 @@
             </div>
             <div class="panel-footer">
               <span>posted {{$post->updated_at}} by {{$post->User->name}}</span>
+              @if(\Illuminate\Support\Facades\Auth::user()->id == $post->user_id)
               <form class="pull-right" action="{{route('post.destroy' , $post)}}" method="post">
                 @method('DELETE')
                 @csrf
                 <button style="margin-left:5px;"> delete </button>
               </form>
+              @endif
               <!-- feed -->
               <hr>
               <div>
