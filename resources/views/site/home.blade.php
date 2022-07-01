@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>aboodChat</title>
 
   <link rel="stylesheet" type="text/css" href="/master-template/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/master-template/css/style.css">
 </head>
+
 <body>
   <!-- nav -->
   <nav class="navbar navbar-default">
@@ -40,8 +42,8 @@
             <h4>friend requests</h4>
             <ul>
               <li>
-                <a href="#">johndoe</a> 
-                <a class="text-success" href="#">[accept]</a> 
+                <a href="#">johndoe</a>
+                <a class="text-success" href="#">[accept]</a>
                 <a class="text-danger" href="#">[decline]</a>
               </li>
             </ul>
@@ -54,11 +56,11 @@
 
 
         <!-- post form -->
-          <div class="input-group">
-            <span class="input-group-btn">
-              <a class="btn btn-success" style = "margin-left:43%;" href="{{route('post.create')}}" > Add Post </a>
-            </span>
-          </div>
+        <div class="input-group">
+          <span class="input-group-btn">
+            <a class="btn btn-success" style="margin-left:43%;" href="{{route('post.create')}}"> Add Post </a>
+          </span>
+        </div>
         <hr>
         <!-- ./post form -->
 
@@ -70,29 +72,39 @@
           <!-- post -->
           @foreach($posts as $post)
           <div class="panel panel-default">
-            <div class="panel-body" >
+            <div class="panel-body">
               <table>
-              <td>      
-                <p>Title : </p>
-              </td>
-              
-              <td>
-              <p style=" padding-left : 3px; "  > {{$post->title}} </p>
-              </td>
+                <td>
+                  <p>Title : </p>
+                </td>
+
+                <td>
+                  <p style=" padding-left : 3px; "> {{$post->title}} </p>
+                </td>
               </table>
             </div>
-            <hr style = " margin-top:1px;" >
-          <div class="panel-body" >
-          <p> {{$post->post_content}} </p>  
-          </div>
-          <form action ="{{route('post.destroy' , $post )}}" method = "post" >
-            @method('DELETE')
-            @csrf
-            <div class="panel-footer">
-              <span>posted {{$post->updated_at}} by {{$post->User->name}}</span> 
-              <button class="pull-right">delete</button>
+            <hr style=" margin-top:1px;">
+            <div class="panel-body">
+              <p> {{$post->post_content}} </p>
             </div>
-          </form>
+
+
+            <div class="panel-footer">
+
+              <span>posted {{$post->updated_at}} by {{$post->User->name}}</span>
+
+              <form  class="pull-right" action="{{route('post.destroy' , $post )}}" method="post">
+                @method('DELETE')
+                @csrf
+                <button  style="margin-left:5px;">delete</button>
+              </form>
+
+              <form  class="pull-right" action="{{route('comment.index' , $post )}}" method="get">
+                @csrf
+                <button type="submit" >comment</button>
+              </form>
+
+            </div>
           </div>
           @endforeach()
           <!-- ./post -->
@@ -101,13 +113,13 @@
         <!-- ./feed -->
       </div>
       <div class="col-md-3">
-      <!-- add friend -->
+        <!-- add friend -->
         <div class="panel panel-default">
           <div class="panel-body">
             <h4>add friend</h4>
             <ul>
               <li>
-                <a href="#">alberte</a> 
+                <a href="#">alberte</a>
                 <a href="#">[add]</a>
               </li>
             </ul>
@@ -121,7 +133,7 @@
             <h4>friends</h4>
             <ul>
               <li>
-                <a href="#">peterpan</a> 
+                <a href="#">peterpan</a>
                 <a class="text-danger" href="#">[unfriend]</a>
               </li>
             </ul>
@@ -143,4 +155,5 @@
   <script type="text/javascript" src="/master-template/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/master-template/js/script.js"></script>
 </body>
+
 </html>

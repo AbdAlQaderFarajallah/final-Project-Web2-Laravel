@@ -32,6 +32,4 @@ Route::get('/profile' , 'App\Http\Controllers\siteController@showProfile' );
 
 Route::resource('/post' , 'App\Http\Controllers\postController' );
 
-Route::get('/postpost',function(){
-    return view ('site.post');
-});
+Route::resource('/comment' , 'App\Http\Controllers\commentController' );
