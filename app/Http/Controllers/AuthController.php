@@ -47,6 +47,6 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->route('post.index');
+        return redirect()->route('site.master');
     }
 }
